@@ -13,7 +13,7 @@ jobs:
 
     steps:
 #     - name: Create a Comment!
-#       uses: actions/github-script@v6
+#       uses: actions/github-script@v5
 #       with:
 #         script: |
 #           github.rest.issues.createComment({
@@ -23,7 +23,7 @@ jobs:
 #             body: '👋 Thanks for contributing!'
 #           })
     - name: List All Comments!
-      uses: actions/github-script@v6
+      uses: actions/github-script@v5
       with:
         script: |
           console.log(JSON.stringify(github.rest.issues.listComments({
