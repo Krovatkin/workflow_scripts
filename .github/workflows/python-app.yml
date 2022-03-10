@@ -31,7 +31,7 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          console.log(JSON.stringify(github.rest.issue.listComments({
+          console.log(JSON.stringify(github.rest.issues.listComments({
             owner: context.repo.owner,
             repo: context.repo.repo,
             issue_number: context.issue.number
