@@ -31,10 +31,10 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          console.log(JSON.stringify(github.rest.pulls.listComments({
+          console.log(JSON.stringify(github.rest.pulls.listReviews({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            pull_request: context.issue.number
+            pull_number: context.issue.number
           })))
     - name: Print Context!
       uses: actions/github-script@v6
