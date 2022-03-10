@@ -36,8 +36,13 @@ jobs:
 #       with:
 #         script: |
 #           console.log(JSON.stringify(context))
-    - name: Print Number!
+#     - name: Print Number!
+#       uses: actions/github-script@v5
+#       with:
+#         script: |
+#           console.log(JSON.stringify(context.issue.number))
+    - name: Print Number 2!
       uses: actions/github-script@v5
       with:
         script: |
-          console.log(JSON.stringify(context.issue.number))
+          console.log(JSON.stringify(context.payload.pull_request.number))
